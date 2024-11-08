@@ -1,0 +1,17 @@
+%{
+%}
+
+%option noyywrap  
+
+%%
+
+[A-Z]+    { printf("The input is a capital word: %s\n", yytext); }
+[A-Za-z]+ { printf("The input is not a capital word: %s\n", yytext); }
+
+
+%%
+
+int main() {
+    yylex();
+    return 0;
+}
