@@ -1,0 +1,11 @@
+%{
+%}
+%%
+[AEIOUaeiou][A-Za-z]* {printf("\nAccepted: %s\n",yytext);}
+[A-Za-z]+ {printf("\nRejected %s\n",yytext);}
+%%
+int yywrap(){}
+int main(){
+printf("\n Enter input:");
+yylex();
+}

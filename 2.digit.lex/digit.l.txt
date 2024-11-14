@@ -1,0 +1,12 @@
+%{
+%}
+%%
+[0-9]+ {printf("\n Digit is valid\n");}
+.+ {printf("\n Digit is not valid\n");}
+%%
+int yywrap(){}
+int main(){
+printf("\n Enter a digit\n");
+yylex();
+}
+
